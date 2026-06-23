@@ -2,11 +2,9 @@
 
 ## Tech Stack
 
-{Just a bulleted list of the main tech stack without descriptions. Anyone interested should already be familiar with their use cases}
+{Just a bulleted list of the main tech stack without descriptions. Anyone interested should already be familiar with their use cases. Group them by some criteria, like frontend, backend and dev-tools.}
 
 ## DOCS tree
-
-{This file is the entry point for project docs, providing a doc tree pattern for newly onboard engineers. Use the content below.}
 
 References to `TERMS.md` can denote either the global terms `docs/TERMS.md` or any domain-specific terms file within the `docs/terms/` directory. The same logic applies to `ADR.md`
 

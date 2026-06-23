@@ -41,11 +41,11 @@ Draft the content for user's approval. Fill OVERVIEW.md based on OVERVIEW-TEMPLA
 
 **Pick the file to edit:**
 
-- If `CLAUDE.md` exists, edit it.
-- if `AGENTS.md` exists, edit it.
-- If neither exists, ask the user which one to create — don't pick for them.
+- If you are using `CLAUDE.md`, edit it.
+- if you are using `AGENTS.md`, edit it.
+- If neither exists, ask the user which one to create.
 
-Never create `AGENTS.md` when `CLAUDE.md` already exists (or vice versa) — always edit the one that's already there.
+Never create `AGENTS.md` when `CLAUDE.md` already exists (or vice versa) — always edit the one you are using.
 
 If an `## Agent docs` block already exists in the chosen file, update its contents in-place rather than appending a duplicate. Don't overwrite user edits to the surrounding sections.
 
