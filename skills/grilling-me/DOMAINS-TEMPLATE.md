@@ -1,4 +1,4 @@
-{Domains are split into technical and business. Typically, a tech domain serves as the underlying infrastructure leveraged by all business domains. Consequently, it may lack project-specific terminology, which is to be expected since it may handle purely general programming concepts. If a domain has neither terms nor ADRs, it shouldn't exist.}
+{Domains are split into technical (e.g., window managent, deployment, UI style) and business. Typically, a tech domain serves as the underlying infrastructure leveraged by all business domains. The distinction lies in the architectural perspective: horizontal vs. vertical. A tech domain cuts across almost all business domains and may lack project-specific terminology, which is to be expected since it may handle purely general programming concepts.}
 
 ## Template
 
