@@ -32,15 +32,13 @@ When domain relationships are being discussed, stress-test them with specific sc
 
 When the user states how something works, check whether the code agrees. If you find a contradiction, surface it: "Your code cancels entire Orders, but you just said partial cancellation is possible — which is right?"
 
-### Update TERMS.md inline
+### Update artifacts inline
 
-When a term is resolved, update TERMS.md right there. Don't batch these up — capture them as they happen. Use the format in TERMS-FORMAT.md.
+Update or create domain-specific or global artifacts:
 
-TERMS.md should be totally devoid of implementation details. Do not treat TERMS.md as a spec, a scratch pad, or a repository for implementation decisions. It is a glossary and nothing else.
-
-### Update DOMAINS.md
-
-Update DOMAINS.md whenever a domain is added or modified. Use the format in DOMAINS-TEMPLATE.md
+- DOMAINS.md: Keep DOMAINS.md updated whenever domains are added, deleted or their relationships change. Use the format in DOMAINS-TEMPLATE.md
+- TERMS.md: When a term is resolved, update TERMS.md right there. Don't batch these up — capture them as they happen. Use the format in TERMS-FORMAT.md. TERMS.md should be totally devoid of implementation details. Do not treat TERMS.md as a spec, a scratch pad, or a repository for implementation decisions. It is a glossary and nothing else.
+- ADR.md: Markdown files within `docs/.zsen/domains/<domain-slug>/adr/`, or the global ADR.md. Use the format in ADR-FORMAT.md.
 
 ## Offer ADRs sparingly
 
@@ -50,7 +48,7 @@ Only offer to create an ADR when all three are true:
 2. Surprising without context — a future reader will wonder "why did they do it this way?". If it's not surprising, nobody will wonder why.
 3. The result of a real trade-off — there were genuine alternatives and you picked one for specific reasons. If there was no real alternative, there's nothing to record beyond "we did the obvious thing."
 
-If any of the three is missing, skip the ADR. Use the format in ADR-FORMAT.md.
+If any of the three is missing, skip the ADR.
 
 ### What qualifies
 

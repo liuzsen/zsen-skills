@@ -7,6 +7,10 @@
 
 {One or two sentence description of what this domain is and why it exists.}
 
+## Code Entry Point
+
+{File path of the code entry point (root module, index page). Do not include code snippets, as they go stale fast. Use a placeholder note if there's no code yet}
+
 ## Language
 
 **Order**:

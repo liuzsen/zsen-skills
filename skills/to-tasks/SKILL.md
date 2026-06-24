@@ -10,7 +10,7 @@ disable-model-invocation: true
 
 ### 1. Gather context
 
-Work from whatever is already in the conversation context.
+Work from whatever is already in the conversation context. Adhere to the existing artifacts, including TERMS.md, ADR.md, and OVERVIEW.md.
 
 ### 2. Explore the codebase (optional)
 
@@ -46,6 +46,6 @@ Ask the user:
 
 Iterate until the user approves the breakdown.
 
-### 5. Publish the tasks to the task tracker
+### 5. Publish the tasks to the local task tracker
 
 Create a `tasks` directory in the same folder as the PRD. For each approved slice, generate a task file at `.local/.zsen/<slug>/tasks/<number>-<task-title>.md`. Use the format in TASK-TEMPLATE.md. Put them in dependency order(blockers first) so you can reference real task identifiers in the "Blocked by" field.

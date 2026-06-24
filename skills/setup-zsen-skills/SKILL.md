@@ -16,21 +16,20 @@ Look at the current repo to understand its starting state. Read whatever exists;
 don't assume:
 
 - `AGENTS.md` and `CLAUDE.md` at the repo root — does either exist? Is there already an `## Agent docs` section in either?
+- Already exists docs
 
 ### 2. Build doc tree
 
 Create the following directory tree and initialize any missing files as empty:
 
 ```
-- docs
+- docs/.zsen
   - OVERVIEW.md   // docs entry point
   - DOMAINS.md    // domain indexing and relationship
   - TERMS.md      // system-wide
   - ADR.md        // system-wide
-  - terms         // create a file when a new domain(tech or business) is added
-    - .keep        // keep the directory
-  - adr
-    - .keep         // keep the directory
+  - domains/
+    - .keep       // keep the directory in git
 ```
 
 ### 3. Fill OVERVIEW
@@ -45,7 +44,7 @@ Draft the content for user's approval. Fill OVERVIEW.md based on OVERVIEW-TEMPLA
 - if you are using `AGENTS.md`, edit it.
 - If neither exists, ask the user which one to create.
 
-Never create `AGENTS.md` when `CLAUDE.md` already exists (or vice versa) — always edit the one you are using.
+Never create `AGENTS.md` when `CLAUDE.md` already exists (or vice versa).
 
 If an `## Agent docs` block already exists in the chosen file, update its contents in-place rather than appending a duplicate. Don't overwrite user edits to the surrounding sections.
 
@@ -59,4 +58,4 @@ See `docs/OVERVIEW.md` for a quick project overview.
 
 ### 5. Done
 
-Tell the user the setup is complete.
+Tell the user the setup is completed.
