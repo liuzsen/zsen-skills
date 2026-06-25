@@ -24,11 +24,11 @@ Do not include general programming concepts unless the project has given them do
 ```md
 # {Context Domain Name or Global}
 
-{One or two sentence description of what this context is and why it exists.}
+{One or two sentence description of what this context is, what it is not (if necessary), and why it exists.}
 
 ## Code Entry Point
 
-{File path of the root module, entry page, or placeholder note if no code exists yet.}
+{File path for the root module, entry page relative to the workspace root. If no code exist yet, use a placeholder note. Format as a bulleted list if there are multiple files.}
 
 ## TERMS
 
