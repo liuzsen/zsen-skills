@@ -1,0 +1,4 @@
+interface:
+  display_name: "Zsen Skills Spec"
+  short_description: "Central spec for zsen docs and artifacts"
+  default_prompt: "Use $zsen-skills-spec to apply the canonical zsen docs structure, artifact boundaries, and templates."

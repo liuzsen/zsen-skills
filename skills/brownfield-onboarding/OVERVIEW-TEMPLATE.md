@@ -6,7 +6,7 @@
 
 ## DOCS tree
 
-References to `TERMS.md` can denote either the global terms `docs/.zsen/TERMS.md` or any domain-specific terms file `docs/.zsen/domains/<slug>/TERMS.md`. The same logic applies to `ADR.md`
+References to `TERMS.md` can denote either the global terms `docs/.zsen/TERMS.md` or any domain-specific terms file `docs/.zsen/domains/<slug>/TERMS.md`. The same logic applies to `ADR.md`, but the file names are dynamic.
 
 Fill out DOMAINS.md, TERMS.md and ADR.md incrementally as the project evolves.
 
@@ -15,7 +15,9 @@ Fill out DOMAINS.md, TERMS.md and ADR.md incrementally as the project evolves.
   - OVERVIEW.md   // Current file. Read this first.
   - DOMAINS.md    // Domain index & relationships. Read next.
   - TERMS.md      // System-wide glossary. Reference frequently.
-  - ADR.md        // System-wide Architecture Decision Recorde. Reference frequently.
+  - adr           // System-wide Architecture Decision Recorde. Reference frequently.
+    - 001-<slug>.md
+    - 002-<slug>.md
   - domains       // Add a new directory here when introducing a domain.
     - <domain-slug>  // Artifacts within a domain should be loaded on demand
       - TERMS.md

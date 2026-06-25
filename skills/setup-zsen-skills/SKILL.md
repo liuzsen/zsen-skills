@@ -1,61 +1,72 @@
 ---
 name: setup-zsen-skills
-description: Configure this repo for the engineering skills — set up domain doc layout. Run once before first use of the other engineering skills.
+description: Bootstrap a repo for zsen-skills. Use when Codex should initialize the canonical `docs/.zsen` tree from `$zsen-skills-spec`, establish the agent-doc rule, and then ask the user whether to continue into the time-consuming `/brownfield-onboarding` workflow.
 disable-model-invocation: true
 ---
 
 # Setup Zsen's Skills
 
-This is a prompt-driven skill, not a deterministic script. Explore, present what you found, confirm with the user, then write.
+This skill is a lightweight bootstrapper.
+
+Treat `$zsen-skills-spec` as the source of truth for the zsen docs structure and artifact conventions.
+
+Do not explore the codebase to infer domains, terms, ADRs, or overview content here. That work belongs to `/brownfield-onboarding`.
 
 ## Process
 
-### 1. Explore
+### 1. Initialize the zsen docs tree
 
-Look at the current repo to understand its starting state. Read whatever exists;
-don't assume:
+Consult `$zsen-skills-spec` and create any missing parts of the canonical `docs/.zsen` tree.
 
-- `AGENTS.md` and `CLAUDE.md` at the repo root — does either exist? Is there already an `## Agent docs` section in either?
-- Already exists docs
+For a fresh setup, initialize:
 
-### 2. Build doc tree
-
-Create the following directory tree and initialize any missing files as empty:
-
-```
-- docs/.zsen
-  - OVERVIEW.md   // docs entry point
-  - DOMAINS.md    // domain indexing and relationship
-  - TERMS.md      // system-wide
-  - ADR.md        // system-wide
-  - domains/
-    - .keep       // keep the directory in git
+```text
+docs/.zsen
+├── OVERVIEW.md
+├── DOMAINS.md
+├── TERMS.md
+├── adr
+│   └── .keep
+└── domains
+    └── .keep
 ```
 
-### 3. Fill OVERVIEW
+Create missing files as empty placeholders. Do not try to fill them here.
 
-Draft the content for user's approval. Fill OVERVIEW.md based on OVERVIEW-TEMPLATE.md.
+### 2. Establish the agent-doc rule
 
-### 4. Write Agent rules
+Pick the file to edit:
 
-**Pick the file to edit:**
+- If you're using `CLAUDE.md`, edit it
+- If you're using `AGENTS.md`, edit it
+- If neither exists, ask the user which one to create
 
-- If you are using `CLAUDE.md`, edit it.
-- if you are using `AGENTS.md`, edit it.
-- If neither exists, ask the user which one to create.
+Never create `AGENTS.md` when `CLAUDE.md` already exists, or vice versa.
 
-Never create `AGENTS.md` when `CLAUDE.md` already exists (or vice versa).
+If an `## Agent docs` block already exists in the chosen file, update it in place instead of appending a duplicate.
 
-If an `## Agent docs` block already exists in the chosen file, update its contents in-place rather than appending a duplicate. Don't overwrite user edits to the surrounding sections.
+Use this block:
 
-The block:
-
-```markdown
+```md
 ## Agent docs
 
-See `docs/OVERVIEW.md` for a quick project overview.
+See `docs/.zsen/OVERVIEW.md` for the project overview, terms, and ADRs.
 ```
 
-### 5. Done
+### 3. Offer brownfield onboarding
 
-Tell the user the setup is completed.
+After bootstrap is complete, ask the user whether to continue with `/brownfield-onboarding`.
+
+Be explicit that `/brownfield-onboarding` is time-consuming because it surveys the repo, fills `OVERVIEW.md`, confirms the domain map with the user, extracts domain-local terms and ADRs, and then rolls the shared understanding up into the global artifacts.
+
+If the user says yes, proceed into `/brownfield-onboarding`.
+
+If the user says no, stop after setup and tell them the repo is ready for onboarding later.
+
+## Done
+
+Tell the user:
+
+- The zsen docs tree is initialized
+- Which agent file was updated or created
+- Whether `/brownfield-onboarding` was deferred or approved as the next step
