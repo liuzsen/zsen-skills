@@ -44,7 +44,7 @@ RIGHT (vertical):
 
 ### 1. Planning
 
-When exploring the codebase, read `docs/TERMS.md` so that test names and interface vocabulary match the project's domain language, and respect ADRs in the area you're touching.
+When exploring the codebase, read `TERMS.md` so that test names and interface vocabulary match the project's domain language, and respect ADRs in the area you're touching.
 
 Before writing any code:
 
