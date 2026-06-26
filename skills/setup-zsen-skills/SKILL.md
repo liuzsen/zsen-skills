@@ -63,6 +63,10 @@ If the user says yes, proceed into `/brownfield-onboarding`.
 
 If the user says no, stop after setup and tell them the repo is ready for onboarding later.
 
+### 4. clean up
+
+Clean up `.keep` files that are no longer needed after the `brownfield-onboarding` process.
+
 ## Done
 
 Tell the user:
