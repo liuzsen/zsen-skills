@@ -26,9 +26,9 @@ Do not include general programming concepts unless the project has given them do
 
 {One or two sentence description of what this context is, what it is not (if necessary), and why it exists.}
 
-## Code Entry Point
+## Starting Point
 
-{File path for the root module, entry page relative to the workspace root. If no code exist yet, use a placeholder note. Format as a bulleted list if there are multiple files.}
+{The main code location a reader should open first to understand this context. Use paths relative to the workspace root. If there are multiple equally important starting points, use a bulleted list. If no clear starting point exists yet, say so explicitly instead of inventing one.}
 
 ## TERMS
 
@@ -43,6 +43,7 @@ _Avoid_: Client, buyer, account
 
 ## Writing guidance
 
+- Use `Starting Point` to anchor the reader in the codebase. It should point to the best place to begin understanding the context, not every relevant file.
 - Be opinionated. When multiple words exist for the same concept, pick the best one and list the others under _Avoid_.
 - Keep definitions tight. One or two sentences max. Define what it IS, not what it does.
 - Only include terms specific to this project's context. General programming concepts (timeouts, error types, utility patterns) don't belong even if the project uses them extensively. Before adding a term, ask: is this a concept unique to this context, or a general programming concept? Only the former belongs.
