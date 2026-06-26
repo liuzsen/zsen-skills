@@ -2,7 +2,7 @@
 
 ## Tech Stack
 
-{Just a bulleted list of the main tech stack without descriptions. Anyone interested should already be familiar with their use cases. Group them by some criteria, like frontend, backend and dev-tools.}
+{Group the stack by architectural role, such as frontend, backend, desktop shell, storage, infrastructure, or developer tooling. Under each group, list only the names of the core technologies that shape how the system is built or run. Do not add descriptions, qualifiers, paths, or explanatory text. This is for an AI agent that can figure out the use cases just from the names. Prefer concise grouped lists over an exhaustive dependency dump.}
 
 ## DOCS tree
 
